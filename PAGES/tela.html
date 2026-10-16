@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ateliê de Cartazes | Criação</title>
+    <link rel="stylesheet" href="../CSS/flexbox.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Ateliê de Cartazes</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="tela.html" class="ativo">Criar</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+<main class="criacao-main">
+    <section class="area-tela">
+        <div id="cartaz-preview" class="cartaz-preview">
+            <img src="../IMG/Personagems/Character_Himeko_Nova_Splash_Art.jpg" id="camada-personagem" class="camada" alt="Personagem">
+            <img src="../IMG/Bordas/Borda_detalhada_cor_Cinza.png" id="camada-borda" class="camada" alt="Borda">
+        </div>
+    </section>
+
+    <aside class="area-ferramentas">
+        <h3>Ferramentas</h3>
+        
+        <div class="grupo-ferramenta">
+            <h4>Personagem</h4>
+            
+            <button class="btn-ferramenta" onclick="mudarPersonagem('Character_Himeko_Nova_Splash_Art.webp')">Himeko</button>
+            <button class="btn-ferramenta" onclick="mudarPersonagem('Character_Welt_Splash_Art.webp')">Welt</button>
+            <button class="btn-ferramenta" onclick="mudarPersonagem('Character_Acheron_Splash_Art.webp')">Acheron</button>
+            <button class="btn-ferramenta" onclick="mudarPersonagem('Agent_Hoshimi_Miyabi_Splash_Art.webp')">Miyabi</button>
+            <button class="btn-ferramenta" onclick="mudarPersonagem('Agent_Ye_Shunguang_Splash_Art.webp')">Ye Shunguang</button>
+            <button class="btn-ferramenta" onclick="mudarPersonagem('The_Index_Proxy_-_Effloresced_E.G.O_Procuration_Don_Quixote_Full_Uptied.webp')">Don Quixote</button>
+            <button class="btn-ferramenta" onclick="mudarPersonagem('The_House_of_Spiders_The_Index_Nursefather_Yi_Sang_Full_Uptied.webp')">Yi Sang</button>
+        </div>
+
+        <div class="grupo-ferramenta">
+            <h4>Borda</h4>
+            <button class="btn-ferramenta" onclick="mudarBorda('Borda_cultural_cor_arco_iris.png')">Arco-íris</button>
+            <button class="btn-ferramenta" onclick="mudarBorda('Borda_elegante_cor_branca.png')">Elegante Branca</button>
+            <button class="btn-ferramenta" onclick="mudarBorda('Borda_grossa_cor_preta.png')">Grossa Preta</button>
+            <button class="btn-ferramenta" onclick="mudarBorda('Borda_detalhada_cor_Cinza.png')">Detalhda Cinza</button>
+        </div>
+        
+        <button class="btn-principal btn-salvar">Salvar Cartaz</button>
+    </aside>
+</main>
+
+<script src="../JS/script.js"></script>
+</body>
+</html>

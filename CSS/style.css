@@ -1,0 +1,148 @@
+/* =========================================
+   TIPOGRAFIA E CORES GERAIS
+========================================= */
+/* Usando uma fonte com serifa para dar aquele tom clássico/antigo */
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-weight: normal;
+}
+
+/* Links do menu */
+.nav-links a {
+    color: #D7CCC8;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.ativo {
+    color: #A0522D; /* Cor de destaque */
+    font-weight: bold;
+}
+
+/* =========================================
+   ESTILOS DA HOME / SOBRE
+========================================= */
+.boas-vindas {
+    max-width: 600px;
+    background-color: rgba(215, 204, 200, 0.4);
+    padding: 3rem;
+    border-radius: 8px;
+    border: 1px solid #8D6E63;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.titulo-destaque {
+    font-size: 2.5rem;
+    color: #3E2723;
+    margin-bottom: 1.5rem;
+}
+
+.texto-descritivo {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #4E342E;
+}
+
+/* =========================================
+   BOTÕES
+========================================= */
+.btn-principal {
+    display: inline-block;
+    background-color: #A0522D; /* Marrom avermelhado / Couro */
+    color: #F4F1EA;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    font-family: 'Georgia', serif;
+}
+
+.btn-principal:hover {
+    background-color: #8D401F;
+    transform: scale(1.05);
+}
+
+.btn-ferramenta {
+    background-color: #F4F1EA;
+    color: #3E2723;
+    border: 1px solid #8D6E63;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    transition: all 0.2s;
+}
+
+.btn-ferramenta:hover {
+    background-color: #3E2723;
+    color: #F4F1EA;
+}
+
+/* =========================================
+   ÁREA DE CRIAÇÃO (O CARTAZ)
+========================================= */
+.cartaz-preview {
+    /* IMPORTANTE: position relative para prender as imagens absolutas dentro dele */
+    position: relative; 
+    width: 400px; /* Largura base do cartaz */
+    height: 560px; /* Altura base do cartaz (proporção retrato) */
+    background-color: #fff; /* Fundo branco caso a imagem falhe */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Sombra de quadro */
+    border: 1px solid #3E2723;
+    overflow: hidden; /* Corta o que passar das bordas */
+}
+
+/* Faz as imagens se empilharem perfeitamente */
+.camada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+}
+
+/* Z-Index garante quem fica na frente de quem */
+#camada-fundo {
+    z-index: 1; /* Fica por baixo */
+}
+
+#camada-personagem {
+    z-index: 2; /* Fica no meio */
+}
+
+#camada-borda {
+    z-index: 3; /* Fica por cima de tudo */
+    pointer-events: none; /* Evita que a borda bloqueie cliques, se necessário depois */
+}
+
+/* =========================================
+   MENU DE FERRAMENTAS
+========================================= */
+.area-ferramentas h3 {
+    color: #3E2723;
+    border-bottom: 2px solid #8D6E63;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.grupo-ferramenta h4 {
+    margin-bottom: 0.5rem;
+    color: #4E342E;
+}
+
+.btn-salvar {
+    width: 100%;
+    margin-top: 1.5rem;
+    text-align: center;
+}

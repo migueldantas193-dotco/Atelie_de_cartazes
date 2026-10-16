@@ -1,0 +1,111 @@
+/* =========================================
+   RESET BÁSICO E ESTRUTURA GERAL
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o footer fique no fim da página */
+    background-color: #F4F1EA; /* Cor Bege Pergaminho */
+    color: #212121;
+}
+
+header, footer {
+    background-color: #3E2723; /* Cor Madeira Escura */
+    color: #F4F1EA;
+    padding: 1rem 2rem;
+}
+
+/* =========================================
+   CABEÇALHO (Ambas as páginas)
+========================================= */
+header {
+    display: flex;
+    justify-content: space-between; /* Espalha Nome do Site para um lado e Links para o outro */
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem; /* Espaço entre os links */
+}
+
+/* =========================================
+   PÁGINA: HOME (index.html)
+========================================= */
+.home-main {
+    flex: 1; /* Preenche o espaço restante entre header e footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* =========================================
+   PÁGINA: ÁREA DE CRIAÇÃO (tela.html)
+========================================= */
+.criacao-main {
+    flex: 1;
+    display: flex;
+    flex-direction: row; /* Desktop: Lado a lado */
+}
+
+.area-tela {
+    flex: 3; /* Ocupa 75% da largura no desktop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #F4F1EA;
+}
+
+.area-ferramentas {
+    flex: 1; /* Ocupa 25% da largura no desktop */
+    background-color: #D7CCC8;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-left: 2px solid #8D6E63; /* Divisória estilizada */
+}
+
+/* =========================================
+   MEDIA QUERIES (Responsividade)
+========================================= */
+
+/* Tablets (Telas médias - até 900px) */
+@media (max-width: 900px) {
+    .area-tela {
+        flex: 2; /* Diminui a proporção da tela */
+    }
+    .area-ferramentas {
+        flex: 1.5; /* Aumenta o espaço para as ferramentas não ficarem espremidas */
+    }
+}
+
+/* Celulares (Telas pequenas - até 600px) */
+@media (max-width: 600px) {
+    .criacao-main {
+        flex-direction: column; /* Muda para empilhado: Tela em cima, Ferramentas embaixo */
+    }
+    
+    .area-tela {
+        padding: 1rem;
+        min-height: 50vh; /* Garante espaço para ver o cartaz no celular */
+    }
+
+    .area-ferramentas {
+        border-left: none;
+        border-top: 2px solid #8D6E63;
+        flex-direction: row; /* Coloca as ferramentas em linha ou grade no celular */
+        flex-wrap: wrap;     /* Permite que as ferramentas quebrem linha */
+        justify-content: space-around;
+    }
+}
